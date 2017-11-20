@@ -1,0 +1,42 @@
+index   - []로 표현
+x[v] : x라는 숫자 배열을 위치값으로 설정함.
+TURE만 출력됨
+v2 <- rep(c(F,F,F,F,T),2)       
+x[v2]
+[1] 5 10
+
+x <- 11:20        
+x[1]   #x에서 1번째 값을 출력
+
+x[c(3,5)] # 3,5번째 값을 출력
+
+x[8:10]  # 8~10번째 값을 출력
+X[]안에 문자는 안됨, 함수 입력 > TRUE인 것의 위치 값을 출력, 숫자 입력 > x의 숫자의 위치 값을 출력
+
+MF[c(1,1,2,2,1,1,1)]   #반복출력도 가능 
+
+v <- vector("numeric",3)     #vector을 만든다. 숫자로 3번 출력
+
+v <- rep(NA,3) 
+v[3] <- 30                   #미리 만든 벡터v에 3번째 위치에 30 값을 입력함.
+
+v[2:3] <- c(1,2)             #v에서 2,3 번째 위치 값을 1,2 을 입력. 
+
+names(v) <- c("a","b","c")   # 벡터 위치 각각에 이름을 줌.
+
+a <- 1:5
+a+5                          #a의 벡터에 모든 값에 5를 더함
+sqrt(a)                      #sqrt=루트
+sd(n)                        #sd=표준편차
+var(z)                       #var=분산 
+
+f <- factor(c("s","t"))             #요소 s,t를 입력	
+class(f)                            #숫자나 문자나 상관없이 factor로 나온다.
+f <- factor(c(1,2,3), levels=c(3,2,1))   #levels는 순서를 바꿀 수 있다. 
+f <- factor(c(1,2,3), levels=c(3,2,1), order=T)    #plot을 그릴 때 order 순서대로 그려진다.
+                                                   #levels를 설정안할경우 factor과 같은값이 levels가 된다.
+as.factor(chr)                                    #factor로 할 경우 형태가 변하지않는데,
+                                                  #as.factor로 할 경우 형태가 factor로 변한다.
+as.factor > factor로 바꿈, as.character > 문자로 바꿈.
+as.integer() : level의 위치를 숫자로 변환, level의 순서에 따라서 1,2, ... 가 된다.
+levels에 있는 숫자 순서로 하여,factor에 있는 숫자들과 일치하는 수가 있는 순서를 출력함.

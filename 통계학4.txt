@@ -1,0 +1,30 @@
+dim(a) <- c(2,4)                       #a를 2열4행으로 만든다.
+matrix(1:8, nrow=2, ncol=4)            #matrix(숫자,열,행)
+dim(m)                                 #구성이 나옴, 2 4 -> 2열 4행
+matrix(1:8, nrow=2, ncol=4, byrow=T)   #열부터 채우기, byrow가 없을 경우 행부터 채움
+m[1,1]                    # 1행 1열 index
+m[1,]                     #1행 전체 index
+m[,-1]                   # 1열 빼고 전부 index
+m[,1:2]                  # 1열,2열 index
+a <- matrix(c(1,2,3,4),2,2)         b <- matrix(c(6,7,8,9),2,2)
+a+b                                                               #단순 계산
+
+diag(a)                        # diag(a) : 대각원소 뽑기. 벡터의 형태로 추출 대각선은 ↘방향임 
+diag(2)                        # diag(2) : 2 by 2 단위 행렬 생성
+t(a)                           #열부터 채우기
+det(a)                         # det(A) : 행렬식 구해줌<Determinant(ad-bc)>
+solve(a)                       # solve(A) : 역행렬
+a%*%b                          # 행렬의 곱 : %*%
+rownames(a) <- c("r1","r2","r3")              #행 이름 설정 , 설정하지않을경우 NULL로 나옴
+colnames(a) <- c("c1","c2","c3")              #열 이름 설정 
+a["r2","c3"]       = a[2,3]
+
+행렬을 만들때 미리 틀을 만들어놓고 만들면 속도가 향상됨.
+
+mat[2,3] <- 3                                 #mat에서 2열 3행에 3을 집어넣는다.
+length(x)                                     # length() : 길이
+plot(mat)                                     #plot에 그림그리기 
+
+arr <- array(z,c(4,4,3))     #z라는 데이터를 4열4행3페이지로 나타냄.	
+arr[1,1,1]                   #arr에서 1열1행1페이지의 위치의 값 
+arr[,,1]                     # 1page만 출력 
